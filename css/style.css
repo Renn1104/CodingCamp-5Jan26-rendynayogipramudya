@@ -1,0 +1,131 @@
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.input-dark {
+  background: rgba(8, 16, 32, 0.9);
+  padding: 14px 16px;
+  border-radius: 14px;
+  color: white;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-dark::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.input-dark:focus {
+  box-shadow: 0 0 0 2px rgba(91, 140, 255, 0.7);
+}
+
+input[type="date"],
+input[type="time"] {
+  color-scheme: dark;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #5b8cff, #3a6df0);
+  border-radius: 14px;
+  font-weight: bold;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(91, 140, 255, 0.6);
+}
+
+.btn-secondary {
+  background: rgba(8, 16, 32, 0.9);
+  padding: 10px 22px;
+  border-radius: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(20, 40, 80, 0.9);
+  transform: scale(1.04);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.btn-secondary:active {
+  transform: scale(0.96);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #5b8cff, #3a6df0);
+  padding: 10px 22px;
+  border-radius: 14px;
+  font-weight: 700;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-danger:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+td {
+  font-size: 14px;
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.light body {
+  color: #0f172a;
+}
+
+.light .glass {
+  background: rgba(255, 255, 255, 0.85);
+  color: #0f172a;
+}
+
+.light .input-dark {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.light .input-dark::placeholder {
+  color: #64748b;
+}
+
+.light input[type="date"],
+.light input[type="time"] {
+  color-scheme: light;
+}
+
+.light .btn-secondary {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.light table {
+  color: #0f172a;
+}
+
+.light tbody tr:hover {
+  background: rgba(0, 0, 0, 0.05);
+}

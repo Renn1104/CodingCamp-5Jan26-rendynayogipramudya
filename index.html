@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body
+    class="min-h-screen relative overflow-hidden flex items-center justify-center"
+  >
+    <div
+      class="absolute inset-0 bg-cover bg-center"
+      style="
+        background-image: url('https://i.pinimg.com/1200x/22/ff/b8/22ffb836318cc79776a44f7b5f20fce6.jpg');
+      "
+    ></div>
+
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-blue-950/90 via-blue-80/85 to-blue-80/80"
+    ></div>
+
+    <div class="relative z-10 w-full max-w-5xl px-4">
+      <div class="glass p-6 md:p-8 rounded-2xl text-white">
+        <header class="flex justify-between items-center mb-6">
+          <h1 class="text-3xl md:text-4xl font-bold tracking-wide">
+            Todo List
+          </h1>
+
+          <button id="themeToggle" class="btn-secondary text-sm">
+            🌙 Dark
+          </button>
+        </header>
+
+        <section class="flex flex-col md:flex-row gap-4 mb-6">
+          <input
+            id="taskInput"
+            type="text"
+            placeholder="Add a todo..."
+            class="input-dark flex-1"
+          />
+
+          <input id="dateInput" type="date" class="input-dark md:w-48" />
+
+          <input id="timeInput" type="time" class="input-dark md:w-36" />
+
+          <button
+            id="addBtn"
+            class="btn-primary text-2xl px-6 w-full md:w-auto"
+          >
+            +
+          </button>
+        </section>
+
+        <section class="flex flex-col md:flex-row justify-between gap-4 mb-4">
+          <div class="flex gap-2">
+            <button id="filterAll" class="btn-secondary text-sm">All</button>
+            <button id="filterPending" class="btn-secondary text-sm">
+              Pending
+            </button>
+            <button id="filterDone" class="btn-secondary text-sm">Done</button>
+          </div>
+
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search task..."
+            class="input-dark md:w-64"
+          />
+        </section>
+
+        <section class="flex justify-end mb-4">
+          <button id="deleteAll" class="btn-danger">DELETE ALL</button>
+        </section>
+
+        <section class="bg-black/50 rounded-2xl overflow-x-auto">
+          <table class="w-full min-w-[650px] text-left">
+            <thead class="border-b border-white/20">
+              <tr>
+                <th class="p-4">TASK</th>
+                <th class="p-4">DATE</th>
+                <th class="p-4">TIME</th>
+                <th class="p-4">STATUS</th>
+                <th class="p-4">ACTIONS</th>
+              </tr>
+            </thead>
+
+            <tbody id="todoBody">
+              <tr>
+                <td colspan="5" class="p-6 text-center text-white/60">
+                  No task found
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
